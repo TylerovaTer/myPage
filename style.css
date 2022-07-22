@@ -1,0 +1,161 @@
+/* při kliknutí aby se každej container zvětšil na velikost celý stránky, ale jinak aby byl malej
+pomocí JS a přidání třídy se zvětšením*/
+
+html {
+    box-sizing: border-box;
+}
+
+
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    justify-content: center;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.obal {
+    border-radius: 50px;
+    box-shadow: 0 0 50px;
+    display: grid;
+    /*grid - uvodni fotka, about me, work experience(odkaz na portfolio),education, courses, skills, porfolio*/
+    grid-template-rows: 500px 400px 400px 400px 400px 400px 400px;
+    position: relative;
+    top: 100px;
+    width: 900px;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    padding: 0;
+    margin: 20px auto 10px auto;
+    text-align: center;
+
+}
+
+.container {
+    position: relative;
+}
+
+.linie {
+    bottom: 0;
+    margin: 0 425px;
+    position: absolute;
+    width: 40px;
+}
+
+nav {
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav a {
+    border-radius: 25px;
+    color: rgb(70, 69, 69);
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgb(215, 216, 216);
+    color: rgb(70, 69, 69);
+}
+
+#top-container {
+    background-color: rgb(1, 47, 1);
+    background-image: url("skala.jpg");
+    background-size: cover;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    color: rgb(241, 240, 239);
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
+    grid-row-start: 1;
+    height: 100%;
+    position: relative;
+
+}
+
+.intro {
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 93px);
+    text-align: center;
+}
+
+#second-container {
+    background-color: white;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+ul {
+    margin: 40px;
+}
+
+#third-container {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+.work-history {
+    display: flex;
+    margin: 40px;
+}
+
+.work-sheet {
+    background-color: rgb(245, 244, 244);
+    border-radius: 25px;
+    flex-basis: 33%;
+    height: 250px;
+    margin: 5px;
+    padding: 8px;
+}
+
+.work-sheet p {
+    margin-top: 20px;
+}
+
+.work-sheet a {
+    color: rgb(14, 99, 156);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.study-history {
+    display: flex;
+    justify-content: center;
+}
